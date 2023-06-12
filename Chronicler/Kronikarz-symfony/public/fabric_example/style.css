@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+.canvas-container {
+    padding: 0;
+    margin: auto;
+}
+
+#canvas {
+    border: 1px black solid;
+}
+
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#addUserForm {
+    width: 50vw;
+}
+
+#addUserForm::backdrop {
+  background: rgb(0 0 0 / 0.4);
+}

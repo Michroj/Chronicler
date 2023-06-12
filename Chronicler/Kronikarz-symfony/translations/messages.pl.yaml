@@ -1,0 +1,32 @@
+user:
+  firstName: Imię
+  lastName: Nazwisko
+  birthday: Data urodzin
+  death: Data śmierci
+  birthplace: Miejsce urodzenia
+  country_of_birth: Kraj urodzenia
+  sex: Płeć
+  profession: Zawód
+  additional_information: Dodatkowe informacje
+  avatar: Zdjęcie
+
+# RelationType
+relation:
+  parent: Osoba pierwsza
+  child: Osoba druga
+  relationship_type: Typ relacji
+  wedding_date: Data ślubu
+
+submit: Wykonaj
+
+# Login
+Please sign in: Logowanie
+Username: Nazwa użytkownika
+Registration: Załóż konto
+Register: Zarejestruj się
+Log In: Logowanie
+Password: Hasło
+Sign in: Zaloguj
+agreeTerms: Wyrażam zgodę
+
+# Register

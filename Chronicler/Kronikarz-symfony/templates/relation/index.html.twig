@@ -1,0 +1,24 @@
+{% block body %}
+    <button class="closeRelationForm-btn btn-close float-end"></button>
+    <h1>{{ title }}</h1>
+
+    {{ form(relation_form) }}
+
+{% endblock %}
+<script>
+    // uses only for problem with edit submit date
+    if ("{{ title }}" == "Edycja relacji") {
+        $(() => {
+            $("form[name='relation']").on('submit', (e) => {
+                const formSerialize = $('form[name="relation"]').serialize();
+                $.post("..{{ app.request.pathinfo }}", formSerialize, function (data) {
+                    $("form[name='relation']").parent().html(data.content);
+                }).fail(function (data) {
+                    $("form[name='relation']").parent().html(data.responseText);
+                });
+                e.preventDefault();
+                return false;
+            });
+        });
+    }
+</script>

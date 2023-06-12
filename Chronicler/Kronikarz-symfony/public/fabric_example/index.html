@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kronikarz</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="./lib/fabric.min.js"></script>
+    <!-- <script src="./lib/jspdf.min.js"></script> -->
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Kronikarz</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <button id="togglePan" class="btn btn-sm btn-outline-secondary">
+                Przełącz przesuwanie
+              </button>
+            </li>
+            <li class="nav-item">
+              <button id="resetZoom" class="btn btn-sm btn-outline-secondary">
+                Zresetuj zoom
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-sm btn-outline-secondary openUserForm-btn">
+                Dodaj członka rodziny
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="btn btn-sm btn-outline-secondary openRelationForm-btn"
+              >
+                Utwórz relację
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-sm btn-outline-secondary downloadJSON-btn">
+                Pobierz drzewo JSON
+              </button>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-sm btn-outline-secondary exportPNG-btn">
+                Wyeksportuj do PNG
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-sm btn-outline-secondary exportPDF-btn">
+                Wyeksportuj do PDF
+              </a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item me-auto">
+              <input type="file" id="file-selector" class="form-control form-control-sm" />
+            </li>
+            <li class="nav-item me-auto">
+              <a
+                id="logout"
+                class="btn btn-sm btn-outline-danger"
+                href="../logout"
+              >
+                Wyloguj
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="fabric-canvas-wrapper">
+      <canvas id="canvas"></canvas>
+    </div>
+    <dialog id="userForm">
+      <button class="closeUserForm-btn btn-close"></button>
+    </dialog>
+    <dialog id="editUserForm">
+      <button class="closeUserForm-btn btn-close"></button>
+    </dialog>
+    <dialog id="relationForm">
+      <button class="closeRelationForm-btn btn-close"></button>
+    </dialog>
+
+    <!-- <script src="https://unpkg.com/fabric@5.3.0/dist/fabric.min.js"></script> -->
+    <script src="test.js" type="module"></script>
+    <script src="index.js" type="module"></script>
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+  </body>
+</html>
